@@ -1,5 +1,6 @@
 ---
 title: KuopioHema-projekti
+layout: default
 ---
-#Valitse sovellus:
+# Valitse sovellus:
 [Yhteenveto syöpähoidoista](treatsum){: .btn}
