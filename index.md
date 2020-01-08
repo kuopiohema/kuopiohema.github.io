@@ -10,3 +10,5 @@ Sovellukset toimivat yleisimmillä moderneilla selaimilla (Edge, Firefox, Chrome
 
 ### Tietoturva
 Kaikki tämän sivuston sovellukset toimivat kokonaisuudessaan käyttäjän omalla koneella, eikä mitään näihin täytettyjä tietoja välitetä verkkopalvelimelle. Tarkemmat tiedot tietoturvasta löytyvät kunkin sovelluksen ohjesivulta.
+
+Kaikki sovellukset (c) Stefan Becker.
