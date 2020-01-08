@@ -13,4 +13,4 @@ Kaikki tämän sivuston sovellukset toimivat kokonaisuudessaan käyttäjän omal
 
 -------
 
-<small>Kaikki sovellukset &copy; Stefan Becker.</small>
+<small>Kaikki sovellukset &copy; S. Becker.</small>
