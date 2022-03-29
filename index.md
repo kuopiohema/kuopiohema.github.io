@@ -3,6 +3,7 @@ layout: default
 ---
 # Valitse sovellus:
 * [Yhteenveto syöpähoidoista](treatsum)
+* [Lasten eGFR-laskuri](pedkidcal)
 
 ## Yleistä sovelluksista
 ### Tuetut selaimet
