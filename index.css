@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    color: #673ab7;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+}
+
+body>* {
+    width: 100%;
+}
+
+.header {
+    background: #c62828;
+    height: 4rem;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.separator {
+    flex-grow: 1;
+}
+
+#languageMenuButton {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background: #c62828;
+    border: 1px solid white;
+    border-radius: 2rem;
+    box-sizing: content-box;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+#languageMenuButton:hover {
+    background: #ff5f52;
+}
+
+.languageButton {
+    display: none;
+}
+
+#languageMenu {
+    display: none;
+    background: #8e0000;
+    border-bottom: 2px double white;
+}
+
+.languageMenuItem {
+    display: block;
+    background: #c62828;
+    cursor: pointer;
+    border-top: 1px solid white;
+}
+
+.languageMenuItem:hover {
+    background: #ff5f52;
+}
+
+.languageMenuItem a {
+    display: block;
+    text-align: center;
+    color: white;
+    height: 2rem;
+    line-height: 2rem;
+}
+
+.main {
+    background: #cfd8dc;
+    flex-grow: 1;
+}
+
+#linksContainer {
+    background: #8e0000;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+#linksContainer h2 {
+    padding: 1rem 0 0 1rem;
+}
+
+#links {
+    margin-top: 1rem;
+}
+
+.link {
+    background: #c62828;
+}
+
+.link:not(:last-child) {
+    margin-bottom: 0.25rem;
+}
+
+.link a {
+    display: block;
+    color: white;
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 1rem;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.link:hover {
+    background: #ff5f52;
+}
+
+#aboutContainer {
+    padding: 1rem;
+}
+
+#aboutContainer * {
+    color: #000000;
+}
+
+#aboutContainer h3 {
+    margin-top: 1rem;
+}
+
+#aboutContainer a {
+    color: #673ab7;
+}
+
+.footer {
+    height: 2rem;
+    background: #c62828;
+    color: white;
+    font-size: 0.5rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 576px) {
+    #languageMenuButton {
+        display: none;
+    }
+
+    .languageButton {
+        display: block;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        border: 1px solid white;
+        border-radius: 0.25rem;
+    }
+
+    .languageButton:hover {
+        background: #ff5f52;
+    }
+
+    .languageButton a {
+        color: white;
+        display: block;
+        width: 2rem;
+        height: 2rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+    /*position: absolute;
+right: 0;
+top: 128px;
+width: 128px;
+background: #673ab7;
+transform: translate(0, 0);
+box-shadow: 2px 2px 3px black;*/
+}
+
+@media only screen and (min-width: 600px) {
+    .header, .main, .footer {
+        width: 600px;
+    }
+
+    #linksContainer {
+        margin: 16px;
+        border-radius: 16px;
+    }
+
+    .footer {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header, .main, .footer {
+        width: 1000px;
+    }
+}
