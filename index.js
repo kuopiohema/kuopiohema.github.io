@@ -25,7 +25,7 @@ const i18n = {
         linksTitle: "Valitse työkalu:",
         catrest: "Syöpähoitojen yhteenveto -työkalu",
         pedkidcal: "Lasten eGFR-laskuri",
-        maintenance: "Aloitussivu päivitetään juuri, työkalut toimivat normaalisti!",
+        maintenance: "Aloitussivu päivitetään tällä hetkellä, työkalut toimivat normaalisti!",
         license: "Lisenssi",
         copyright: "KuopioHema-projekti ja kaikki siihen kuuluvat sovellukset ©2018-2022 S. Becker"
     }
