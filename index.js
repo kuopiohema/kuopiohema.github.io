@@ -1,17 +1,33 @@
-const strings = {
+const i18n = {
     en: {
         title: "KuopioHema Project",
-        select: "Select tool:",
+        aboutTitle: "About the project",
+        aboutText: "The KuopioHema project is a collection of helper apps intended for use in pediatrics, especially pediatric haematology and oncology.",
+        browsersTitle: "Browser support",
+        browsersText: "Apps support all common modern browsers (Edge, Firefox, Chrome, Safari). Internet Explorer and old versions of other browsers are not supported.",
+        securityTitle: "Data security",
+        securityText: "All apps on this site run entirely on the user's machine, using the browser's JavaScript engine. No user-entered data is transmitted to the server.",
+        linksTitle: "Select tool:",
         catrest: "Cancer Treatment Summary Tool",
         pedkidcal: "Pediatric eGFR Calculator",
-        maintenance: "Landing page currently undergoing maintenance, tools are functioning normally!"
+        maintenance: "Landing page currently undergoing maintenance, tools are functioning normally!",
+        license: "License",
+        copyright: "KuopioHema project and all included apps ©2018-2022 S. Becker"
     },
     fi: {
         title: "KuopioHema-projekti",
-        select: "Valitse työkalu:",
+        aboutTitle: "Tietoa projektista",
+        aboutText: "KuopioHema-projekti on kokoelma lastentautien, erityisesti lastenhematologian ja -onkologian apusovelluksia.",
+        browsersTitle: "Selaintuki",
+        browsersText: "Sovellukset toimivat kaikilla yleisillä moderneilla selaimilla (Edge, Firefox, Chrome, Safari). Internet Explorer -selainta ja muiden selainten vanhoja versioita ei tueta.",
+        securityTitle: "Tietoturva",
+        securityText: "Kaikki tämän sivuston sovellukset toimivat kokonaan käyttäjän omalla koneella, käyttäen selaimen JavaScript-moottoria. Mitään käyttäjän syöttämiä tietoja ei välitetä palvelimelle.",
+        linksTitle: "Valitse työkalu:",
         catrest: "Syöpähoitojen yhteenveto -työkalu",
         pedkidcal: "Lasten eGFR-laskuri",
-        maintenance: "Aloitussivu päivitetään juuri, työkalut toimivat normaalisti!"
+        maintenance: "Aloitussivu päivitetään juuri, työkalut toimivat normaalisti!",
+        license: "Lisenssi",
+        copyright: "KuopioHema-projekti ja kaikki siihen kuuluvat sovellukset ©2018-2022 S. Becker"
     }
 };
 
@@ -25,7 +41,9 @@ const languages = {
     fi: 'Suomi'
 };
 
-const languageSelect = document.getElementById('language_select');
+const initialLanguage = navigator.language.slice(0, 2) || languages[0];
+
+const languageSelect = document.getElementById('languageSelect');
 
 function buildLinkList() {
     const list = document.getElementById('links');
@@ -50,39 +68,21 @@ function buildLanguageSelect() {
         optionElement.innerText = value;
         languageSelect.appendChild(optionElement);
     });
+    languageSelect.value = initialLanguage;
 }
 
 function setStrings(language) {
-    if (!Object.keys(languages).includes(language))
-        language = languages[0];
-    const useStrings = strings[language];
-
-
-    /*const title = document.getElementById('title');
-    if (title)
-        title.innerText = useStrings.title;
-
-    const select = document.getElementById('select_text');
-    if (select)
-        select.innerText = useStrings.select;
-
-    links.forEach(link => {
-        const linkElement = document.getElementById(link);
-        if (!linkElement)
-            return;
-        linkElement.innerText = strings[language][link];
-    });*/
-    Object.entries(useStrings).forEach(([key, value]) => {
+    const i18nStrings = i18n[language];
+    Object.entries(i18nStrings).forEach(([key, value]) => {
         const element = document.getElementById(key);
 
-        if (element)
+        if (element && typeof(value) === 'string')
             element.innerText = value;
     });
 }
 
 buildLinkList();
 buildLanguageSelect();
-const initialLanguage = navigator.language || languages[0]
 setStrings(initialLanguage);
 
 if (languageSelect) {
