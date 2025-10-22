@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>KuopioHema</title>
+        <title>KuopioHema-projekti</title>
+        <link href="http://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="./index.css" rel="stylesheet" />
     </head>
     <body>
-        <noscript>This site requires JavaScript to function!</noscript>
+        <noscript>Tämä sivusto vaatii JavaScriptiä toimakseen!</noscript>
+        <div class="header">
+            <h1 class="title">KuopioHema-projekti</h1>
+        </div>
+        <div class="main">
+            <div id="linksContainer">
+                <h2>Valitse työkalu:</h2>
+                <ul id="links">
+                    <li class="link"><a href="https://kuopiohema.github.io/treatsum">Syöpähoitojen yhteenveto</a></li>
+                    <li class="link"><a href="https://kuopiohema.github.io/pedkidcal">Lasten eGFR-laskuri</a></li>
+                </ul>
+            </div>
+            <div id="aboutContainer">
+                <h2>Tietoa projektista</h2>
+                <p>
+                    KuopioHema-projekti on kokoelma lastentautien, erityisesti lastenhematologian ja
+                    -onkologian apusovelluksia. Kaikki sovellukset ovat
+                    <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank">GNU GPLv3 -lisenssin</a>
+                    alla.
+                </p>
+                <h3>Vastuu:</h3>
+                <p>
+                    Sovellusten käyttö tapahtuu käyttäjän omalla vastuulla. Kehittäjä ei takaa laskurisovellusten tulosten oikeellisuutta eikä ota vastuuta
+                    mahdollisten virheellisten tulosten käytöstä johtuvista seurauksista.
+                </p>
+                <h3>Selaintuki:</h3>
+                <p>
+                    Sovellukset toimivat kaikilla yleisillä moderneilla selaimilla (Edge, Firefox, Chrome, Safari).
+                    Internet Explorer -selainta ja muiden selainten vanhoja versioita ei tueta.
+                </p>
+                <h3>Tietoturva:</h3>
+                <p>
+                    Kaikki tämän sivuston sovellukset toimivat kokonaan käyttäjän omassa selaimessa. Mitään käyttäjän syöttämiä tietoja ei välitetä palvelimelle.
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>KuopioHema-projekti ja kaikki siihen kuuluvat sovellukset &copy;2018-2025 S. Becker</p>
+        </div>
     </body>
-    <script src="./redirect.js"></script>
 </html>
